@@ -3,14 +3,16 @@ import matplotlib.pyplot as plt
 
 input_file = input(
     "Enter the path to the CSV file (e.g., 'data/captured_data.csv'): ")
+target_col = input(
+    "Enter the name of the column to analyze (e.g., 'RandomNumbers'): ")
 df = pd.read_csv(input_file)
 
-median_value = df['RandomNumbers'].median()
+median_value = df[target_col].median()
 
 plt.figure(figsize=(10, 6))
-plt.hist(df['RandomNumbers'])
-plt.title('Distribution of Random Numbers')
-plt.xlabel('Random Numbers')
+plt.hist(df[target_col])
+plt.title(f'Distribution of {target_col}')
+plt.xlabel(target_col)
 plt.ylabel('Frequency')
 plt.grid(axis='y', alpha=0.3)
 plt.axvline(median_value, color='red', linestyle='dashed',
