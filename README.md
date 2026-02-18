@@ -3,4 +3,4 @@ A Python-based utility to generate uniform random distributions, calculate stati
 Future updates will include support for large/custom datasets
 
 Below is an emaple output of running sort.py and then plot_data.py:
-![Alt text for the image](assets/example_output.png.png)
+![Example output](assets/example_output.png)
