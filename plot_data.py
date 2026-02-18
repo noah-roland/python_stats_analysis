@@ -1,7 +1,9 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('data/captured_data.csv')
+input_file = input(
+    "Enter the path to the CSV file (e.g., 'data/captured_data.csv'): ")
+df = pd.read_csv(input_file)
 
 median_value = df['RandomNumbers'].median()
 

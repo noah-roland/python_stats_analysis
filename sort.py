@@ -6,7 +6,6 @@ import pandas as pd
 def get_data():
     num = []
     for i in range(1, 1001):
-        random.randint(1, 9999)
         num.append(random.randint(1, 9999))
     num.sort()
     return num, statistics.median(num)
