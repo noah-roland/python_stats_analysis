@@ -18,5 +18,5 @@ if __name__ == "__main__":
 
 # convert "num" to a dataframe (pandas)
 df = pd.DataFrame(data, columns=['RandomNumbers'])
-df.to_csv('captured_data.csv', index=False)
+df.to_csv('data/captured_data.csv', index=False)
 print("Data saved to captured_data.csv")
