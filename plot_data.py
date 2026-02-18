@@ -8,6 +8,7 @@ target_col = input(
 df = pd.read_csv(input_file)
 
 median_value = df[target_col].median()
+max_value = df[target_col].max()
 
 plt.figure(figsize=(10, 6))
 plt.hist(df[target_col])
@@ -17,5 +18,7 @@ plt.ylabel('Frequency')
 plt.grid(axis='y', alpha=0.3)
 plt.axvline(median_value, color='red', linestyle='dashed',
             linewidth=1, label=f'Median: {median_value}')
+plt.axvline(max_value, color='green', linestyle='dashed',
+            linewidth=1, label=f'Max: {max_value}')
 plt.legend()
 plt.show()
